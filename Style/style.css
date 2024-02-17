@@ -3,3 +3,7 @@
 .railwayFont{
     font-family: "Raleway", sans-serif;
 }
+.dottedBorder{
+    padding-bottom: 12px;
+    border-bottom: 1px dashed rgba(3, 7, 18, 0.2);
+}
