@@ -9,8 +9,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="Style/style.css">
 </head>
-<body class="max-w-6xl mx-auto pt-1 px-1 railwayFont ">
-    <header>
+<body class=" pt-1 px-1 railwayFont ">
+    <header class="max-w-6xl mx-auto">
         <nav>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -41,7 +41,7 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="mb-16 max-w-6xl mx-auto">
         <div class="bannerSection lg:mt-8 mt-4">
             <div class="hero rounded-[32px]" style=" background-image: linear-gradient(180.00deg, rgba(3, 7, 18, 0.5),rgba(3, 7, 18, 0) 100%), url(images/banner.png); ">
                 <div class="hero-content text-center text-neutral-content lg:px-52 lg:py-32 p-6 rounded-2xl">
@@ -241,9 +241,32 @@
         </div>
 
     </main>
-    <footer>
-        
-    </footer>
+    <footer class=" bg-[#030712] py-12 text-neutral-content ">
+        <div class="max-w-6xl mx-auto ">
+            <div class="flex justify-between items-center mt-10 pb-6  ">
+                <div>
+                    <h1 class="text-4xl font-extrabold py-3">E-Ticket</h1>
+                     <p>P-Ticket is a digital platform to make your <br>daily commuting better.</p>
+                </div> 
+                <div >
+                    <h6 class="footer-title">Download our app</h6> 
+                    <div class="flex justify-center items-center border rounded">
+                        <img class="w-6 h-6 mr-3 " src="images/playstore.png" alt="">
+                        <p class="text-white font-semibold text-[10px] ">GET IT ON <br><span class="text-[16px] ">Google Play</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="borderBottom border-[#FFFFFF4D]"></div>
+        <div class="max-w-6xl pt-8 mx-auto flex justify-between">
+            <p>@all rights reserved, P-Ticket services limited.2024</p>
+            <div class="lg:flex justify-between gap-4">
+                <p><a href="">Terms & condition</a></p>
+                <p><a href="">Return & refund policy</a></p>
+                <p><a href="">Privacy policy</a></p>
+            </div>
+        </div>
+      </footer>
     
 </body>
 </html>
