@@ -8,7 +8,10 @@
     font-family: "Inter", sans-serif;
 }
 .dottedBorder{
-    padding-bottom: 12px;
+    padding-bottom: 24px;
+    border-bottom: 1px dashed rgba(3, 7, 18, 0.2);
+}
+.borderBottom{
     border-bottom: 1px dashed rgba(3, 7, 18, 0.2);
 }
 .dottedBorderAll{

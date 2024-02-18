@@ -129,11 +129,10 @@
                 </div>
             </div>
         </div>
-
-        <div class="selectSetArea border mb-9 lg:p-8 rounded-3xl">
-            <div class="borderRight">
-                <h3 class="dottedBorder">Select Your Seat</h3>
-                <div class="flex justify-between text-lg font-medium dottedBorder mt-3">
+        <div class="selectSetArea border mb-9 p-3 lg:p-8 lg:justify-between  rounded-3xl lg:flex lg:gap-8">
+            <div class="lg:basis-7/12">
+                <h3 class="dottedBorder text-2xl text-[#030712] font-bold">Select Your Seat</h3>
+                <div class="flex justify-between  text-lg font-medium dottedBorder mt-6">
                     <div class="flex gap-2 text-[#03071280]">
                         <img class="dottedBorderAll" src="images/seat-gray.png" alt="">
                         <p>Available</p>
@@ -144,8 +143,8 @@
                     </div>
                 </div>
                 <div>
-                <div class="flex justify-end">
-                    <button class="bg-[#0307121A] px-10 py-3 rounded-xl my-6"> <img src="images/Vector (1).png" alt=""> </button>
+                <div class="flex justify-end my-6">
+                    <button class="bg-[#0307121A] px-10 py-3 rounded-xl"> <img src="images/Vector (1).png" alt=""> </button>
                 </div>
                 <div class="allSeats interFont grid grid-cols-4 gap-x-8 gap-y-6  text-lg font-medium">
                     <button class="px-10 py-3 rounded-xl bg-[#F7F8F8]"> A1 </button>
@@ -191,9 +190,53 @@
                 </div>
             </div>
             </div>
-
+            <div class="borderRight"></div>
             <div>
+                <h3 class="dottedBorder my-6 lg:mt-0 text-2xl text-[#030712] font-bold">Select Your Seat</h3>
+                <div class="bg-[#F7F8F8] p-8 rounded-xl">
+                    <div class="text-lg font-bold interFont text-[#030712] flex justify-between borderBottom pb-3 mb-6">
+                        <h3>Seat <sup class="bg-[#1DD100] p-1 rounded-md">0</sup> </h3>
+                        <h3>Class</h3>
+                        <h3>Price</h3>
+                    </div>
+                    <div>
+                        <h1>Pleasee Add your Seat...</h1>
+                    </div>
+                    <div class="totalPrice border-t-2  my-6 pt-5 text-lg font-bold interFont text-[#030712] flex justify-between">
+                        <h3>Total Price</h3>
+                        <h3>BDT <span>00.00</span></h3>
+                    </div>
+                    <div class="copunArea bg-white flex rounded-xl">
+                        <input type="text" placeholder="Have any copupon?" class="input w-full max-w-xs"/>
+                        <button class="btn bg-[#1DD100] text-white">Apply</button>
+                    </div>
+                    <div class="hiddenArea hidden">
+                        <div class="discountPrice  my-6 pt-5 text-lg font-bold interFont text-[#030712] flex justify-between">
+                            <h3>Discount</h3>
+                            <h3><span>00.00</span></h3>
+                        </div>
+                        <div class="discountPrice border-t-2  my-6 pt-5 text-lg font-bold interFont text-[#030712] flex justify-between">
+                            <h3>Total Price</h3>
+                            <h3>BDT <span>00.00</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-6">
+                    <h2 class="text-[#030712] text-lg font-bold py-3">Passenger Name*</h2>
+                    <input type="text" placeholder="Enter your name" class="input w-full max-w-xs" />
 
+                    <h2 class="text-[#030712] text-lg font-bold py-3">Phone Number*</h2>
+                    <input type="text" placeholder="Enter your phone number" class="input w-full max-w-xs" />
+
+                    <h2 class="text-[#030712] text-lg font-bold py-3">Email ID</h2>
+                    <input type="text" placeholder="Enter your email id" class="input w-full max-w-xs" />
+
+                    <button class="btn mt-6 bg-[#1DD100] text-white w-full">Next</button>
+                </div>
+                <div class="links flex justify-between mt-6 underline">
+                    <a href="#">Terms and Conditions</a>
+                    <a href="#">Cancellation Policy</a>
+                </div>
             </div>
         </div>
 
