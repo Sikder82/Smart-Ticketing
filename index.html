@@ -48,7 +48,7 @@
                   <div class="">
                     <h1 class="mb-5 text-5xl font-bold lg:text-6xl  lg:font-extrabold">End-to-End Travel with <br> P Paribahan</h1>
                     <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                    <button onclick="scrollSeatSection()" class="btn btn-primary bg-[#1DD100] border-none text-[#030712] lg:text-xl font-bold lg:px-8 lg:hover:bg-[#76fa61]">Buy Tickets</button>
+                    <a href="#selectSetArea"><button onclick="scrollSeatSection()" class="btn btn-primary bg-[#1DD100] border-none text-[#030712] lg:text-xl font-bold lg:px-8 lg:hover:bg-[#76fa61]">Buy Tickets</button></a>
                   </div>
                 </div>
               </div>
@@ -129,7 +129,7 @@
                 </div>
             </div>
         </div>
-        <div class="selectSetArea border mb-9 p-3 lg:p-8 lg:justify-between  rounded-3xl lg:flex lg:gap-8">
+        <div id="selectSetArea" class=" border mb-9 p-3 lg:p-8 lg:justify-between  rounded-3xl lg:flex lg:gap-8">
             <div class="lg:basis-7/12">
                 <h3 class="dottedBorder text-2xl text-[#030712] font-bold">Select Your Seat</h3>
                 <div class="flex justify-between  text-lg font-medium dottedBorder mt-6">
@@ -206,9 +206,9 @@
                         <h3>Total Price</h3>
                         <h3>BDT <span id="totalPrice">00.00</span></h3>
                     </div>
-                    <div id="coupnArea" class=" bg-white flex rounded-xl">
+                    <div id="coupnArea" class="flex rounded-xl">
                         <input id="usedCoupn" type="text" placeholder="Have any copupon?" class="input w-full max-w-xs"/>
-                        <button onclick="applyCoupn();" class="btn bg-[#1DD100] text-white">Apply</button>
+                        <button id="applyButton" >Apply</button>
                     </div>
                     <div id="hiddenArea" class=" hidden">
                         <div class="discountPrice  my-6 pt-5 text-lg font-bold interFont text-[#030712] flex justify-between">
@@ -226,12 +226,12 @@
                     <input type="text" placeholder="Enter your name" class="input w-full max-w-xs" />
 
                     <h2 class="text-[#030712] text-lg font-bold py-3">Phone Number*</h2>
-                    <input type="text" placeholder="Enter your phone number" class="input w-full max-w-xs" />
+                    <input id="inputNumber" type="text" placeholder="Enter your phone number" class="input w-full max-w-xs" />
 
                     <h2 class="text-[#030712] text-lg font-bold py-3">Email ID</h2>
                     <input type="text" placeholder="Enter your email id" class="input w-full max-w-xs" />
 
-                    <button class="btn mt-6 bg-[#1DD100] text-white w-full">Next</button>
+                    <button id="nextButton"  class="  mt-6  w-full">Next</button>
                 </div>
                 <div class="links flex justify-between mt-6 underline">
                     <a href="#">Terms and Conditions</a>
@@ -268,7 +268,8 @@
         </div>
       </footer>
     
-      <script src="JS/select.js"></script>
+      <script src="JS/visible.js"></script>
       <script src="JS/coupon.js"></script>
+      <script src="JS/select.js"></script>
 </body>
 </html>

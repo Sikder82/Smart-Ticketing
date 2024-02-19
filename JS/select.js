@@ -8,7 +8,8 @@ const seletedSeats= document.getElementById('addSeats');
 const removeText= document.getElementById('h1');
 const availableSet= document.getElementById('availableSet');
 const bookingSeat = document.getElementById('bookingSeat');
-
+const nextButton = document.getElementById('nextButton');
+const inputNumber= document.getElementById('inputNumber');
 
 let selectedSeat = [];
 
@@ -51,5 +52,37 @@ for(let i=0; i<seats.length; i++){
         }        
     });
     
+}
+
+function successMessage(){
+    alert("Successfully done");
+}
+
+function getTicket(){
+    inputNumber.value;
+    if( !isNaN(inputNumber) || inputNumber ===""){
+        alert("Please write currect Number!");
+    }else if(selectedSeat.length === 0){
+        alert("Please select atlist one seat!");
+    }else{
+        successMessage();
+    }
+}
+
+inputNumber.addEventListener('input', function(){
+    const count =buttonVisible(nextButton , inputNumber);
+    if(count === 1){
+        nextButton.addEventListener('click', getTicket);
+    }else{
+        nextButton.removeEventListener('click', getTicket);
+    }
+});
+
+function conditionOfCoupon(){
+    if(selectedSeat.length !== 0){
+        applyCoupn();
+    }else{
+        alert('Please Select Atlist one seat');
+    }
 }
 
