@@ -1,8 +1,3 @@
-function scrollSeatSection(){
-    const ticketArea= document.getElementById('ticketArea');
-    console.log(ticketArea);
-}
-
 const seats = document.querySelectorAll(".seat");
 const seletedSeats= document.getElementById('addSeats');
 const removeText= document.getElementById('h1');
@@ -10,20 +5,34 @@ const availableSet= document.getElementById('availableSet');
 const bookingSeat = document.getElementById('bookingSeat');
 const nextButton = document.getElementById('nextButton');
 const inputNumber= document.getElementById('inputNumber');
+const ticketPrice= document.getElementById('ticketPrice');
 
 let selectedSeat = [];
+
+
+function setTotalAmount(){
+    const totalPrice= document.getElementById('totalPrice');
+    const total=parseFloat(totalPrice.innerText)+parseFloat(ticketPrice.innerText);
+    totalPrice.innerText = total;
+    applyCoupn();
+}
 
 function updateSeat(){
     availableSet.innerText= (40 - selectedSeat.length) ;
     bookingSeat.innerText= selectedSeat.length;
+    setTotalAmount();
 }
+
+
 
 function addStyle(seatId){
     const seat = document.getElementById(seatId);
     const addSeats = document.createElement('p');
     seat.classList.add('bg-green-500');
     seat.classList.add('text-white');
-    addSeats.innerText= seatId;
+    addSeats.classList.add('flex');
+    addSeats.classList.add('justify-between');
+    addSeats.innerHTML= "<span>"+seatId+"</span><span>Economy</span><span>550</span>";
     seletedSeats.appendChild(addSeats);
 }
 
@@ -33,7 +42,9 @@ function checkSelects(seatId){
         addStyle(seatId);
         updateSeat();
     }else{
-        alert("This Seat Already Selected!")
+        Swal.fire({
+            text: "This seat is already selected!",
+          });
     }    
 }
 
@@ -48,22 +59,24 @@ for(let i=0; i<seats.length; i++){
         }else if( selectedSeat.length < 4){
             checkSelects(seat.innerText);      
         }else{
-            alert("You select only 4 seat!");
+            Swal.fire({
+                text: "You select only 4 seats!",
+              });
         }        
     });
     
 }
 
-function successMessage(){
-    alert("Successfully done");
-}
 
 function getTicket(){
-    inputNumber.value;
-    if( !isNaN(inputNumber) || inputNumber ===""){
-        alert("Please write currect Number!");
+    if( isNaN(inputNumber.value) || inputNumber.value ===""){
+        Swal.fire({
+            text: "Please write correct Number!",
+          });
     }else if(selectedSeat.length === 0){
-        alert("Please select atlist one seat!");
+        Swal.fire({
+            text: "Please select atleast one seat!",
+          });
     }else{
         successMessage();
     }
@@ -81,8 +94,13 @@ inputNumber.addEventListener('input', function(){
 function conditionOfCoupon(){
     if(selectedSeat.length !== 0){
         applyCoupn();
+        applyMessege();
     }else{
-        alert('Please Select Atlist one seat');
+        Swal.fire({
+            title: "",
+            text: "Please Select Atlist one seat!",
+            icon: ""
+          });
     }
 }
 
