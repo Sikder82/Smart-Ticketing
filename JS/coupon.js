@@ -59,10 +59,16 @@ function applyCoupn(){
 }
 
 usedCoupn.addEventListener('keyup', function(){
-    const count =buttonVisible(applyButton , usedCoupn);
-    if(count === 1){
-        applyButton.addEventListener('click', conditionOfCoupon);
+    if(selectedSeat.length === 4){
+        const count =buttonVisible(applyButton , usedCoupn);
+        if(count === 1){
+            applyButton.addEventListener('click', conditionOfCoupon);
+        }else{
+            applyButton.removeEventListener('click', conditionOfCoupon);
+        }
     }else{
-        applyButton.removeEventListener('click', conditionOfCoupon);
+        Swal.fire({
+            text: "Please add more seat for get coupon!",
+          });
     }
 });

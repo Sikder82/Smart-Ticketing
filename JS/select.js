@@ -7,7 +7,7 @@ const nextButton = document.getElementById('nextButton');
 const inputNumber= document.getElementById('inputNumber');
 const ticketPrice= document.getElementById('ticketPrice');
 
-let selectedSeat = [];
+var selectedSeat = [];
 
 
 function setTotalAmount(){
@@ -83,7 +83,9 @@ function getTicket(){
 }
 
 inputNumber.addEventListener('input', function(){
-    const count =buttonVisible(nextButton , inputNumber);
+    if(selectedSeat.length !== 0){
+        const count =buttonVisible(nextButton , inputNumber);
+    }
     if(count === 1){
         nextButton.addEventListener('click', getTicket);
     }else{
@@ -103,4 +105,3 @@ function conditionOfCoupon(){
           });
     }
 }
-
