@@ -38,6 +38,7 @@ function applyCoupn(){
     const totalPrice = document.getElementById('totalPrice');
     const totalAmount = parseFloat(totalPrice.innerText);
 
+    
     if (usedCoupn.value === firstCoupn){
         const discountAmount = totalAmount * 0.15;
         discountTotalAmount = totalAmount - discountAmount;
@@ -66,9 +67,5 @@ usedCoupn.addEventListener('keyup', function(){
         }else{
             applyButton.removeEventListener('click', conditionOfCoupon);
         }
-    }else{
-        Swal.fire({
-            text: "Please add more seat for get coupon!",
-          });
     }
 });

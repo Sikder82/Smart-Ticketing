@@ -11,9 +11,11 @@ var selectedSeat = [];
 
 
 function setTotalAmount(){
+    const dicountPrice = document.getElementById('dicountPrice');
     const totalPrice= document.getElementById('totalPrice');
     const total=parseFloat(totalPrice.innerText)+parseFloat(ticketPrice.innerText);
     totalPrice.innerText = total;
+    dicountPrice.innerText = total;
     applyCoupn();
 }
 
@@ -85,11 +87,11 @@ function getTicket(){
 inputNumber.addEventListener('input', function(){
     if(selectedSeat.length !== 0){
         const count =buttonVisible(nextButton , inputNumber);
-    }
-    if(count === 1){
-        nextButton.addEventListener('click', getTicket);
-    }else{
-        nextButton.removeEventListener('click', getTicket);
+        if(count === 1){
+            nextButton.addEventListener('click', getTicket);
+        }else{
+            nextButton.removeEventListener('click', getTicket);
+        }
     }
 });
 
